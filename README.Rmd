@@ -1,0 +1,76 @@
+---
+title: "README"
+output: html_document
+date: "2026-04-16"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# PL4246 Network Analysis Project
+
+## Overview
+This project contains a network analysis of classroom interaction data from two academic semesters. The analysis uses R and the `igraph` package to construct directed weighted networks and compute structural network metrics, reciprocity, community structure, and centrality measures.
+
+The goal is to compare network structure across two cohorts:
+- AY25 Semester 2
+- AY24 Semester 1
+
+---
+
+## Data
+
+The raw data files are located in the `data/` folder:
+
+- `class-responses_AY25Sem2.csv`: Edge list representing directed interactions for AY25 Sem 2
+- `class-responses_AY24Sem1.csv`: Edge list representing directed interactions for AY24 Sem 1
+
+Each dataset is used to construct a directed weighted network.
+
+---
+
+## Scripts
+
+All analysis is performed in:
+
+- `R/analysis.R`
+
+This script:
+1. Loads raw data
+2. Constructs directed networks using `igraph`
+3. Computes network-level metrics (density, reciprocity, clustering, centralisation)
+4. Performs reciprocity analysis (t-tests)
+5. Computes distances and diameter
+6. Detects communities using the Louvain method
+7. Identifies top bridge nodes (betweenness centrality)
+8. Generates plots
+9. Saves all outputs into the `outputs/` folder
+
+---
+
+## Outputs
+
+All results are saved in the `outputs/` directory:
+
+### Tables
+- `metrics.csv`: Summary network metrics for both datasets
+- `distance_metrics.csv`: Mean distance and diameter
+- `community_summary.csv`: Number of detected communities
+- `top_bridges_g1.csv`: Top betweenness centrality nodes
+- `reciprocity_tests.txt`: Statistical test results for reciprocity
+
+### Figures
+- `plots/g1.png`: Network visualization for AY25 Sem 2
+- `plots/g2.png`: Network visualization for AY24 Sem 1
+
+---
+
+## How to Run the Analysis
+
+1. Open R or RStudio
+2. Set the working directory to the project folder
+3. Run the full script:
+
+```r
+source("R/analysis.R")
