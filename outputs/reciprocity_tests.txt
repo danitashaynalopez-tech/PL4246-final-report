@@ -1,0 +1,24 @@
+
+	Welch Two Sample t-test
+
+data:  weight by reciprocated
+t = -3.2573, df = 77.933, p-value = 0.001667
+alternative hypothesis: true difference in means between group FALSE and group TRUE is not equal to 0
+95 percent confidence interval:
+ -0.6404371 -0.1545431
+sample estimates:
+mean in group FALSE  mean in group TRUE 
+           1.146628            1.544118 
+
+
+	Welch Two Sample t-test
+
+data:  weight by reciprocated
+t = -6.7935, df = 71.125, p-value = 2.782e-09
+alternative hypothesis: true difference in means between group FALSE and group TRUE is not equal to 0
+95 percent confidence interval:
+ -1.6268369 -0.8885693
+sample estimates:
+mean in group FALSE  mean in group TRUE 
+           1.095238            2.352941 
+
